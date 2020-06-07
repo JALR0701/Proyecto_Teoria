@@ -10,7 +10,7 @@ b = 5
 
 u = sp.Symbol('u')
 
-x = np.linspace(0,a)
+x = np.linspace(-a,a)
 
 y = np.linspace(0,b)
 
@@ -18,13 +18,13 @@ plt.figure()
 
 n = 20
 
-F = (2/np.sinh((n*np.pi*a)/b)*b)*sp.atan(u/a)*sp.sin((n*np.pi*u)/b)
+F = (2/np.cosh((n*np.pi*a)/b)*b)*((2*u*u*u)+5)*sp.sin((n*np.pi*u)/b)
 
 R = float(sp.integrate(F,(u,0,b)))
 
 print(R)
 
-c = R*np.sinh((n*np.pi*x)/b)*np.sin((n*np.pi*y)/b)
+c = R*np.cosh((n*np.pi*x)/b)*np.sin((n*np.pi*y)/b)
 
 plt.plot(c)
 
