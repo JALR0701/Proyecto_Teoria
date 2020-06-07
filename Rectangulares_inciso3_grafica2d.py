@@ -16,7 +16,7 @@ y = np.linspace(0,b)
 
 plt.figure()
 
-n = 2
+n = 20
 
 F = (2/np.exp((n*np.pi*a)/b)*b)*sp.atan(u/a)*sp.sin((n*np.pi*u)/b)
 
